@@ -46,7 +46,7 @@ dependencies:
 
   # QR code generation and scanning
   qr_flutter: ^4.1.0
-  qr_code_scanner: ^1.0.1
+  mobile_scanner: ^5.2.1
 
   # Image handling
   image_picker: ^1.1.2

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qr_code_scanner/qr_code_scanner.dart';
+import 'package:mobile_scanner/mobile_scanner.dart';
 
 class QRScannerScreen extends StatefulWidget {
   const QRScannerScreen({super.key});
@@ -9,31 +9,25 @@ class QRScannerScreen extends StatefulWidget {
 }
 
 class _QRScannerScreenState extends State<QRScannerScreen> {
-  final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
-  Barcode? result;
-  QRViewController? controller;
+  MobileScannerController cameraController = MobileScannerController();
 
-  // The callback for when a QR code is scanned
-  void _onQRViewCreated(QRViewController controller) {
-    this.controller = controller;
-    controller.scannedDataStream.listen((barcode) {
-      setState(() {
-        result = barcode;
-        // Process the scanned result (likely an agreement ID)
-        _processScannedResult(barcode.code ?? '');
-      });
-    });
+  void _onDetect(BarcodeCapture barcodes) {
+    final String code = barcodes.barcodes.first.rawValue ?? '';
+    if (code.isNotEmpty) {
+      _processScannedResult(code);
+    }
   }
 
   void _processScannedResult(String scannedCode) {
     // The scanned code likely contains agreement information
     // We'll process it and navigate to confirmation screen
+    cameraController.dispose();  // Dispose before navigating
     Navigator.of(context).pop(scannedCode);
   }
 
   @override
   void dispose() {
-    controller?.dispose();
+    cameraController.dispose();
     super.dispose();
   }
 
@@ -46,52 +40,33 @@ class _QRScannerScreenState extends State<QRScannerScreen> {
         foregroundColor: Theme.of(context).colorScheme.onPrimary,
       ),
       body: Column(
-        children: <Widget>[
+        children: [
           Expanded(
-            flex: 5,
-            child: QRView(
-              key: qrKey,
-              onQRViewCreated: _onQRViewCreated,
-              overlay: QrScannerOverlayShape(
-                borderColor: Theme.of(context).colorScheme.primary,
-                borderRadius: 10,
-                borderLength: 30,
-                borderWidth: 10,
-                cutOutSize: 300,
-              ),
+            child: MobileScanner(
+              controller: cameraController,
+              onDetect: _onDetect,
             ),
           ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              padding: const EdgeInsets.all(20),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  if (result != null)
-                    Text(
-                      'Scanning: ${result!.code}',
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                    )
-                  else
-                    const Text('Scan an agreement QR code'),
-                  ElevatedButton(
-                    onPressed: () async {
-                      await controller?.pauseCamera();
-                      // Add functionality to manually enter agreement ID
-                      _showManualEntryDialog();
-                    },
-                    child: const Text('Enter Manually'),
-                  ),
-                  ElevatedButton(
-                    onPressed: () async {
-                      await controller?.flipCamera();
-                    },
-                    child: const Text('Flip Camera'),
-                  ),
-                ],
-              ),
+          Container(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  onPressed: () async {
+                    // Add functionality to manually enter agreement ID
+                    _showManualEntryDialog();
+                  },
+                  child: const Text('Enter Manually'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    // Toggle torch
+                    cameraController.toggleTorch();
+                  },
+                  child: const Text('Toggle Flash'),
+                ),
+              ],
             ),
           )
         ],
@@ -101,7 +76,7 @@ class _QRScannerScreenState extends State<QRScannerScreen> {
 
   void _showManualEntryDialog() {
     final TextEditingController controller = TextEditingController();
-    
+
     showDialog(
       context: context,
       builder: (BuildContext context) {

@@ -18,9 +18,17 @@ class MainProvider with ChangeNotifier {
     final apiService = ApiService();
     await apiService.init();
 
-    await _authProvider.fetchUserProfile();
+    // Only try to fetch user profile if token exists
     if (_authProvider.user != null) {
-      await _agreementProvider.fetchAgreements(_authProvider.user!.id);
+      try {
+        await _authProvider.fetchUserProfile();
+        if (_authProvider.user != null) {
+          await _agreementProvider.fetchAgreements(_authProvider.user!.id);
+        }
+      } catch (e) {
+        // If API call fails, continue without user data
+        // Could log to a proper logging system in production
+      }
     }
   }
 

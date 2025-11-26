@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../services/main_provider.dart';
+import '../services/api_service.dart';
 import 'login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -22,11 +21,11 @@ class _SplashScreenState extends State<SplashScreen> {
   Future<void> _navigateToNextScreen() async {
     await Future.delayed(const Duration(seconds: 2)); // Show splash for 2 seconds
 
-    // Initialize the main provider to check authentication status
-    final mainProvider = Provider.of<MainProvider>(context, listen: false);
-    await mainProvider.init();
+    // Initialize the API service to load environment variables
+    final apiService = ApiService();
+    await Future.microtask(() => apiService.init());
 
-    // Navigate to appropriate screen based on authentication status
+    // Navigate to login screen after splash
     if (mounted) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(

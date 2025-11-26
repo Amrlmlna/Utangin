@@ -1,0 +1,563 @@
+                ... 26 more
+                Suppressed: java.lang.Exception: Storage[D:\boyfie\App\utangin\build\mobile_scanner\kotlin\compileDebugKotlin\cacheable\caches-jvm\jvm\kotlin\class-fq-name-to-source.tab] registration stack trace       
+                        at org.jetbrains.kotlin.com.intellij.util.io.FilePageCache.registerPagedFileStorage(FilePageCache.java:437)
+                        ... 45 more
+        Suppressed: java.lang.IllegalStateException: Storage for [D:\boyfie\App\utangin\build\mobile_scanner\kotlin\compileDebugKotlin\cacheable\caches-jvm\jvm\kotlin\source-to-classes.tab] is already registered       
+                at org.jetbrains.kotlin.com.intellij.util.io.FilePageCache.registerPagedFileStorage(FilePageCache.java:410)
+                at org.jetbrains.kotlin.com.intellij.util.io.PagedFileStorage.<init>(PagedFileStorage.java:72)
+                at org.jetbrains.kotlin.com.intellij.util.io.ResizeableMappedFile.<init>(ResizeableMappedFile.java:55)
+                at org.jetbrains.kotlin.com.intellij.util.io.PersistentBTreeEnumerator.<init>(PersistentBTreeEnumerator.java:128)
+                at org.jetbrains.kotlin.com.intellij.util.io.PersistentEnumerator.createDefaultEnumerator(PersistentEnumerator.java:52)
+                at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapImpl.<init>(PersistentMapImpl.java:165)
+                at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapImpl.<init>(PersistentMapImpl.java:140)
+                at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapBuilder.buildImplementation(PersistentMapBuilder.java:88)
+                at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapBuilder.build(PersistentMapBuilder.java:71)
+                at org.jetbrains.kotlin.com.intellij.util.io.PersistentHashMap.<init>(PersistentHashMap.java:45)
+                at org.jetbrains.kotlin.com.intellij.util.io.PersistentHashMap.<init>(PersistentHashMap.java:71)
+                at org.jetbrains.kotlin.incremental.storage.LazyStorage.createMap(LazyStorage.kt:62)
+                at org.jetbrains.kotlin.incremental.storage.LazyStorage.getStorageOrCreateNew(LazyStorage.kt:59)
+                at org.jetbrains.kotlin.incremental.storage.LazyStorage.set(LazyStorage.kt:80)
+                at org.jetbrains.kotlin.incremental.storage.InMemoryStorage.applyChanges(InMemoryStorage.kt:108)
+                at org.jetbrains.kotlin.incremental.storage.AppendableInMemoryStorage.applyChanges(InMemoryStorage.kt:179)
+                at org.jetbrains.kotlin.incremental.storage.InMemoryStorage.close(InMemoryStorage.kt:136)    
+                at org.jetbrains.kotlin.incremental.storage.AppendableSetBasicMap.close(BasicMap.kt:157)     
+                at org.jetbrains.kotlin.incremental.storage.BasicMapsOwner$close$1.invoke(BasicMapsOwner.kt:53)
+                at org.jetbrains.kotlin.incremental.storage.BasicMapsOwner$close$1.invoke(BasicMapsOwner.kt:53)
+                at org.jetbrains.kotlin.incremental.storage.BasicMapsOwner.forEachMapSafe(BasicMapsOwner.kt:87)
+                ... 26 more
+                Suppressed: java.lang.Exception: Storage[D:\boyfie\App\utangin\build\mobile_scanner\kotlin\compileDebugKotlin\cacheable\caches-jvm\jvm\kotlin\source-to-classes.tab] registration stack trace
+                        at org.jetbrains.kotlin.com.intellij.util.io.FilePageCache.registerPagedFileStorage(FilePageCache.java:437)
+                        ... 46 more
+        Suppressed: java.lang.IllegalStateException: Storage for [D:\boyfie\App\utangin\build\mobile_scanner\kotlin\compileDebugKotlin\cacheable\caches-jvm\jvm\kotlin\internal-name-to-source.tab] is already registered 
+                at org.jetbrains.kotlin.com.intellij.util.io.FilePageCache.registerPagedFileStorage(FilePageCache.java:410)
+                at org.jetbrains.kotlin.com.intellij.util.io.PagedFileStorage.<init>(PagedFileStorage.java:72)
+                at org.jetbrains.kotlin.com.intellij.util.io.ResizeableMappedFile.<init>(ResizeableMappedFile.java:55)
+                at org.jetbrains.kotlin.com.intellij.util.io.PersistentBTreeEnumerator.<init>(PersistentBTreeEnumerator.java:128)
+                at org.jetbrains.kotlin.com.intellij.util.io.PersistentEnumerator.createDefaultEnumerator(PersistentEnumerator.java:52)
+                at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapImpl.<init>(PersistentMapImpl.java:165)
+                at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapImpl.<init>(PersistentMapImpl.java:140)
+                at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapBuilder.buildImplementation(PersistentMapBuilder.java:88)
+                at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapBuilder.build(PersistentMapBuilder.java:71)
+                at org.jetbrains.kotlin.com.intellij.util.io.PersistentHashMap.<init>(PersistentHashMap.java:45)
+                at org.jetbrains.kotlin.com.intellij.util.io.PersistentHashMap.<init>(PersistentHashMap.java:71)
+                at org.jetbrains.kotlin.incremental.storage.LazyStorage.createMap(LazyStorage.kt:62)
+                at org.jetbrains.kotlin.incremental.storage.LazyStorage.getStorageOrCreateNew(LazyStorage.kt:59)
+                at org.jetbrains.kotlin.incremental.storage.LazyStorage.set(LazyStorage.kt:80)
+                at org.jetbrains.kotlin.incremental.storage.InMemoryStorage.applyChanges(InMemoryStorage.kt:108)
+                at org.jetbrains.kotlin.incremental.storage.AppendableInMemoryStorage.applyChanges(InMemoryStorage.kt:179)
+                at org.jetbrains.kotlin.incremental.storage.InMemoryStorage.close(InMemoryStorage.kt:136)    
+                at org.jetbrains.kotlin.incremental.storage.PersistentStorageWrapper.close(PersistentStorage.kt:124)
+                at org.jetbrains.kotlin.incremental.storage.BasicMapsOwner$close$1.invoke(BasicMapsOwner.kt:53)
+                at org.jetbrains.kotlin.incremental.storage.BasicMapsOwner$close$1.invoke(BasicMapsOwner.kt:53)
+                at org.jetbrains.kotlin.incremental.storage.BasicMapsOwner.forEachMapSafe(BasicMapsOwner.kt:87)
+                ... 26 more
+                Suppressed: java.lang.Exception: Storage[D:\boyfie\App\utangin\build\mobile_scanner\kotlin\compileDebugKotlin\cacheable\caches-jvm\jvm\kotlin\internal-name-to-source.tab] registration stack trace       
+                        at org.jetbrains.kotlin.com.intellij.util.io.FilePageCache.registerPagedFileStorage(FilePageCache.java:437)
+                        ... 46 more
+        Suppressed: java.lang.Exception: Could not close incremental caches in D:\boyfie\App\utangin\build\mobile_scanner\kotlin\compileDebugKotlin\cacheable\caches-jvm\lookups: id-to-file.tab, file-to-id.tab
+                at org.jetbrains.kotlin.incremental.storage.BasicMapsOwner.forEachMapSafe(BasicMapsOwner.kt:95)
+                at org.jetbrains.kotlin.incremental.storage.BasicMapsOwner.close(BasicMapsOwner.kt:53)       
+                at org.jetbrains.kotlin.incremental.LookupStorage.close(LookupStorage.kt:155)
+                ... 25 more
+                Suppressed: java.lang.IllegalStateException: Storage for [D:\boyfie\App\utangin\build\mobile_scanner\kotlin\compileDebugKotlin\cacheable\caches-jvm\lookups\id-to-file.tab] is already registered
+                        at org.jetbrains.kotlin.com.intellij.util.io.FilePageCache.registerPagedFileStorage(FilePageCache.java:410)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PagedFileStorage.<init>(PagedFileStorage.java:72)
+                        at org.jetbrains.kotlin.com.intellij.util.io.ResizeableMappedFile.<init>(ResizeableMappedFile.java:55)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentBTreeEnumerator.<init>(PersistentBTreeEnumerator.java:128)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentEnumerator.createDefaultEnumerator(PersistentEnumerator.java:52)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapImpl.<init>(PersistentMapImpl.java:165)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapImpl.<init>(PersistentMapImpl.java:140)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapBuilder.buildImplementation(PersistentMapBuilder.java:88)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapBuilder.build(PersistentMapBuilder.java:71)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentHashMap.<init>(PersistentHashMap.java:45)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentHashMap.<init>(PersistentHashMap.java:71)
+                        at org.jetbrains.kotlin.incremental.storage.LazyStorage.createMap(LazyStorage.kt:62) 
+                        at org.jetbrains.kotlin.incremental.storage.LazyStorage.getStorageOrCreateNew(LazyStorage.kt:59)
+                        at org.jetbrains.kotlin.incremental.storage.LazyStorage.set(LazyStorage.kt:80)       
+                        at org.jetbrains.kotlin.incremental.storage.InMemoryStorage.applyChanges(InMemoryStorage.kt:108)
+                        at org.jetbrains.kotlin.incremental.storage.InMemoryStorage.close(InMemoryStorage.kt:136)
+                        at org.jetbrains.kotlin.incremental.storage.PersistentStorageWrapper.close(PersistentStorage.kt:124)
+                        at org.jetbrains.kotlin.incremental.storage.BasicMapsOwner$close$1.invoke(BasicMapsOwner.kt:53)
+                        at org.jetbrains.kotlin.incremental.storage.BasicMapsOwner$close$1.invoke(BasicMapsOwner.kt:53)
+                        at org.jetbrains.kotlin.incremental.storage.BasicMapsOwner.forEachMapSafe(BasicMapsOwner.kt:87)
+                        ... 27 more
+                        Suppressed: java.lang.Exception: Storage[D:\boyfie\App\utangin\build\mobile_scanner\kotlin\compileDebugKotlin\cacheable\caches-jvm\lookups\id-to-file.tab] registration stack trace
+                                at org.jetbrains.kotlin.com.intellij.util.io.FilePageCache.registerPagedFileStorage(FilePageCache.java:437)
+                                ... 46 more
+                Suppressed: java.lang.IllegalStateException: Storage for [D:\boyfie\App\utangin\build\mobile_scanner\kotlin\compileDebugKotlin\cacheable\caches-jvm\lookups\file-to-id.tab] is already registered
+                        at org.jetbrains.kotlin.com.intellij.util.io.FilePageCache.registerPagedFileStorage(FilePageCache.java:410)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PagedFileStorage.<init>(PagedFileStorage.java:72)
+                        at org.jetbrains.kotlin.com.intellij.util.io.ResizeableMappedFile.<init>(ResizeableMappedFile.java:55)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentBTreeEnumerator.<init>(PersistentBTreeEnumerator.java:128)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentEnumerator.createDefaultEnumerator(PersistentEnumerator.java:52)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapImpl.<init>(PersistentMapImpl.java:165)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapImpl.<init>(PersistentMapImpl.java:140)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapBuilder.buildImplementation(PersistentMapBuilder.java:88)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapBuilder.build(PersistentMapBuilder.java:71)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentHashMap.<init>(PersistentHashMap.java:45)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentHashMap.<init>(PersistentHashMap.java:71)
+                        at org.jetbrains.kotlin.incremental.storage.LazyStorage.createMap(LazyStorage.kt:62) 
+                        at org.jetbrains.kotlin.incremental.storage.LazyStorage.getStorageOrCreateNew(LazyStorage.kt:59)
+                        at org.jetbrains.kotlin.incremental.storage.LazyStorage.set(LazyStorage.kt:80)       
+                        at org.jetbrains.kotlin.incremental.storage.InMemoryStorage.applyChanges(InMemoryStorage.kt:108)
+                        at org.jetbrains.kotlin.incremental.storage.InMemoryStorage.close(InMemoryStorage.kt:136)
+                        at org.jetbrains.kotlin.incremental.storage.PersistentStorageWrapper.close(PersistentStorage.kt:124)
+                        at org.jetbrains.kotlin.incremental.storage.BasicMapsOwner$close$1.invoke(BasicMapsOwner.kt:53)
+                        at org.jetbrains.kotlin.incremental.storage.BasicMapsOwner$close$1.invoke(BasicMapsOwner.kt:53)
+                        at org.jetbrains.kotlin.incremental.storage.BasicMapsOwner.forEachMapSafe(BasicMapsOwner.kt:87)
+                        ... 27 more
+                        Suppressed: java.lang.Exception: Storage[D:\boyfie\App\utangin\build\mobile_scanner\kotlin\compileDebugKotlin\cacheable\caches-jvm\lookups\file-to-id.tab] registration stack trace
+                                at org.jetbrains.kotlin.com.intellij.util.io.FilePageCache.registerPagedFileStorage(FilePageCache.java:437)
+                                ... 46 more
+        Suppressed: java.lang.Exception: Could not close incremental caches in D:\boyfie\App\utangin\build\mobile_scanner\kotlin\compileDebugKotlin\cacheable\caches-jvm\inputs: source-to-output.tab
+                ... 27 more
+                Suppressed: java.lang.IllegalStateException: Storage for [D:\boyfie\App\utangin\build\mobile_scanner\kotlin\compileDebugKotlin\cacheable\caches-jvm\inputs\source-to-output.tab] is already registered    
+                        at org.jetbrains.kotlin.com.intellij.util.io.FilePageCache.registerPagedFileStorage(FilePageCache.java:410)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PagedFileStorage.<init>(PagedFileStorage.java:72)
+                        at org.jetbrains.kotlin.com.intellij.util.io.ResizeableMappedFile.<init>(ResizeableMappedFile.java:55)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentBTreeEnumerator.<init>(PersistentBTreeEnumerator.java:128)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentEnumerator.createDefaultEnumerator(PersistentEnumerator.java:52)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapImpl.<init>(PersistentMapImpl.java:165)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapImpl.<init>(PersistentMapImpl.java:140)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapBuilder.buildImplementation(PersistentMapBuilder.java:88)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentMapBuilder.build(PersistentMapBuilder.java:71)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentHashMap.<init>(PersistentHashMap.java:45)
+                        at org.jetbrains.kotlin.com.intellij.util.io.PersistentHashMap.<init>(PersistentHashMap.java:71)
+                        at org.jetbrains.kotlin.incremental.storage.LazyStorage.createMap(LazyStorage.kt:62) 
+                        at org.jetbrains.kotlin.incremental.storage.LazyStorage.getStorageOrCreateNew(LazyStorage.kt:59)
+                        at org.jetbrains.kotlin.incremental.storage.LazyStorage.set(LazyStorage.kt:80)       
+                        at org.jetbrains.kotlin.incremental.storage.InMemoryStorage.applyChanges(InMemoryStorage.kt:108)
+                        at org.jetbrains.kotlin.incremental.storage.AppendableInMemoryStorage.applyChanges(InMemoryStorage.kt:179)
+                        at org.jetbrains.kotlin.incremental.storage.InMemoryStorage.close(InMemoryStorage.kt:136)
+                        at org.jetbrains.kotlin.incremental.storage.AppendableSetBasicMap.close(BasicMap.kt:157)
+                        at org.jetbrains.kotlin.incremental.storage.BasicMapsOwner$close$1.invoke(BasicMapsOwner.kt:53)
+                        at org.jetbrains.kotlin.incremental.storage.BasicMapsOwner$close$1.invoke(BasicMapsOwner.kt:53)
+                        at org.jetbrains.kotlin.incremental.storage.BasicMapsOwner.forEachMapSafe(BasicMapsOwner.kt:87)
+                        ... 26 more
+                        Suppressed: java.lang.Exception: Storage[D:\boyfie\App\utangin\build\mobile_scanner\kotlin\compileDebugKotlin\cacheable\caches-jvm\inputs\source-to-output.tab] registration stack trace
+                                at org.jetbrains.kotlin.com.intellij.util.io.FilePageCache.registerPagedFileStorage(FilePageCache.java:437)
+                                ... 46 more
+
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:8:8: warning: 'class Allocation : BaseObj' is deprecated. Deprecated in Java.
+exception: import android.renderscript.Allocation
+exception:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:9:8: warning: 'class Element : BaseObj' is deprecated. Deprecated in Java.
+exception: import android.renderscript.Element
+exception:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:10:8: warning: 'class RenderScript : Any' is deprecated. Deprecated in Java.
+exception: import android.renderscript.RenderScript
+exception:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:11:8: warning: 'class ScriptIntrinsicYuvToRGB : ScriptIntrinsic' is deprecated. Deprecated in Java.
+exception: import android.renderscript.ScriptIntrinsicYuvToRGB
+exception:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:12:8: warning: 'class Type : BaseObj' is deprecated. Deprecated in Java.
+exception: import android.renderscript.Type
+exception:        ^^^^^^^^^^^^^^^^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:27:22: warning: 'class RenderScript : Any' is deprecated. Deprecated in Java.
+exception:     private val rs = RenderScript.create(context)
+exception:                      ^^^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:27:35: warning: 'static fun create(p0: Context!): RenderScript!' is deprecated. Deprecated in Java.
+exception:     private val rs = RenderScript.create(context)
+exception:                                   ^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:29:9: warning: 'class ScriptIntrinsicYuvToRGB : ScriptIntrinsic' is deprecated. Deprecated in Java.
+exception:         ScriptIntrinsicYuvToRGB.create(rs, Element.U8_4(rs))
+exception:         ^^^^^^^^^^^^^^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:29:33: warning: 'static fun create(p0: RenderScript!, p1: Element!): ScriptIntrinsicYuvToRGB!' is deprecated. Deprecated in Java.
+exception:         ScriptIntrinsicYuvToRGB.create(rs, Element.U8_4(rs))
+exception:                                 ^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:29:44: warning: 'class Element : BaseObj' is deprecated. Deprecated in Java.
+exception:         ScriptIntrinsicYuvToRGB.create(rs, Element.U8_4(rs))
+exception:                                            ^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:29:52: warning: 'static fun U8_4(p0: RenderScript!): Element!' is deprecated. Deprecated in Java.
+exception:         ScriptIntrinsicYuvToRGB.create(rs, Element.U8_4(rs))
+exception:                                                    ^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:35:34: warning: 'class Allocation : BaseObj' is deprecated. Deprecated in Java.
+exception:     private var inputAllocation: Allocation? = null
+exception:                                  ^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:36:35: warning: 'class Allocation : BaseObj' is deprecated. Deprecated in Java.
+exception:     private var outputAllocation: Allocation? = null
+exception:                                   ^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:44:27: warning: 'class Type : BaseObj' is deprecated. Deprecated in Java.
+exception:             val yuvType = Type.Builder(rs, Element.U8(rs))
+exception:                           ^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:44:32: warning: 'constructor(p0: RenderScript!, p1: Element!): Type.Builder' is deprecated. Deprecated in Java.
+exception:             val yuvType = Type.Builder(rs, Element.U8(rs))
+exception:                                ^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:44:44: warning: 'class Element : BaseObj' is deprecated. Deprecated in Java.
+exception:             val yuvType = Type.Builder(rs, Element.U8(rs))
+exception:                                            ^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:44:52: warning: 'static fun U8(p0: RenderScript!): Element!' is deprecated. Deprecated in Java.
+exception:             val yuvType = Type.Builder(rs, Element.U8(rs))
+exception:                                                    ^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:45:18: warning: 'fun setX(p0: Int): Type.Builder!' is deprecated. Deprecated in Java.
+exception:                 .setX(image.width)
+exception:                  ^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:46:18: warning: 'fun setY(p0: Int): Type.Builder!' is deprecated. Deprecated in Java.
+exception:                 .setY(image.height)
+exception:                  ^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:47:18: warning: 'fun setYuvFormat(p0: Int): Type.Builder!' is deprecated. Deprecated in Java.
+exception:                 .setYuvFormat(yuvBuffer.type)
+exception:                  ^^^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:48:31: warning: 'class Allocation : BaseObj' is deprecated. Deprecated in Java.
+exception:             inputAllocation = Allocation.createTyped(
+exception:                               ^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:48:42: warning: 'static fun createTyped(p0: RenderScript!, p1: Type!, p2: Int): Allocation!' is deprecated. Deprecated in Java.
+exception:             inputAllocation = Allocation.createTyped(
+exception:                                          ^^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:50:25: warning: 'fun create(): Type!' is deprecated. Deprecated in Java.
+exception:                 yuvType.create(),
+exception:                         ^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:51:17: warning: 'class Allocation : BaseObj' is deprecated. Deprecated in Java.
+exception:                 Allocation.USAGE_SCRIPT
+exception:                 ^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:51:28: warning: 'static field USAGE_SCRIPT: Int' is deprecated. Deprecated in Java.
+exception:                 Allocation.USAGE_SCRIPT
+exception:                            ^^^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:54:28: warning: 'class Type : BaseObj' is deprecated. Deprecated in Java.
+exception:             val rgbaType = Type.Builder(rs, Element.RGBA_8888(rs))
+exception:                            ^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:54:33: warning: 'constructor(p0: RenderScript!, p1: Element!): Type.Builder' is deprecated. Deprecated in Java.
+exception:             val rgbaType = Type.Builder(rs, Element.RGBA_8888(rs))
+exception:                                 ^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:54:45: warning: 'class Element : BaseObj' is deprecated. Deprecated in Java.
+exception:             val rgbaType = Type.Builder(rs, Element.RGBA_8888(rs))
+exception:                                             ^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:54:53: warning: 'static fun RGBA_8888(p0: RenderScript!): Element!' is deprecated. Deprecated in Java.
+exception:             val rgbaType = Type.Builder(rs, Element.RGBA_8888(rs))
+exception:                                                     ^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:55:18: warning: 'fun setX(p0: Int): Type.Builder!' is deprecated. Deprecated in Java.
+exception:                 .setX(image.width)
+exception:                  ^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:56:18: warning: 'fun setY(p0: Int): Type.Builder!' is deprecated. Deprecated in Java.
+exception:                 .setY(image.height)
+exception:                  ^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:57:32: warning: 'class Allocation : BaseObj' is deprecated. Deprecated in Java.
+exception:             outputAllocation = Allocation.createTyped(
+exception:                                ^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:57:43: warning: 'static fun createTyped(p0: RenderScript!, p1: Type!, p2: Int): Allocation!' is deprecated. Deprecated in Java.
+exception:             outputAllocation = Allocation.createTyped(
+exception:                                           ^^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:59:26: warning: 'fun create(): Type!' is deprecated. Deprecated in Java.
+exception:                 rgbaType.create(),
+exception:                          ^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:60:17: warning: 'class Allocation : BaseObj' is deprecated. Deprecated in Java.
+exception:                 Allocation.USAGE_SCRIPT
+exception:                 ^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:60:28: warning: 'static field USAGE_SCRIPT: Int' is deprecated. Deprecated in Java.
+exception:                 Allocation.USAGE_SCRIPT
+exception:                            ^^^^^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:65:27: warning: 'fun copyFrom(p0: ByteArray!): Unit' is deprecated. Deprecated in Java.
+exception:         inputAllocation!!.copyFrom(bytes)
+exception:                           ^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:68:27: warning: 'fun copyFrom(p0: ByteArray!): Unit' is deprecated. Deprecated in Java.
+exception:         inputAllocation!!.copyFrom(bytes)
+exception:                           ^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:69:24: warning: 'fun setInput(p0: Allocation!): Unit' is deprecated. Deprecated in Java.
+exception:         scriptYuvToRgb.setInput(inputAllocation)
+exception:                        ^^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:70:24: warning: 'fun forEach(p0: Allocation!): Unit' is deprecated. Deprecated in Java.
+exception:         scriptYuvToRgb.forEach(outputAllocation)
+exception:                        ^^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:71:28: warning: 'fun copyTo(p0: Bitmap!): Unit' is deprecated. Deprecated in Java.
+exception:         outputAllocation!!.copyTo(output)
+exception:                            ^^^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:76:35: warning: 'val type: Type!' is deprecated. Deprecated in Java.
+exception:                 inputAllocation!!.type.x != image.width ||   // image size changed
+exception:                                   ^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:76:40: warning: 'val x: Int' is deprecated. Deprecated in Java.
+exception:                 inputAllocation!!.type.x != image.width ||   // image size changed
+exception:                                        ^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:77:35: warning: 'val type: Type!' is deprecated. Deprecated in Java.
+exception:                 inputAllocation!!.type.y != image.height ||
+exception:                                   ^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:77:40: warning: 'val y: Int' is deprecated. Deprecated in Java.
+exception:                 inputAllocation!!.type.y != image.height ||
+exception:                                        ^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:78:35: warning: 'val type: Type!' is deprecated. Deprecated in Java.
+exception:                 inputAllocation!!.type.yuv != yuvBuffer.type || // image format changed
+exception:                                   ^^^^
+exception: c:\Users\NURUL\AppData\Local\Pub\Cache\hosted\pub.dev\mobile_scanner-5.2.3\android\src\main\kotlin\dev\steenbakker\mobile_scanner\utils\YuvToRgbConverter.kt:78:40: warning: 'val yuv: Int' is deprecated. Deprecated in Java.
+exception:                 inputAllocation!!.type.yuv != yuvBuffer.type || // image format changed
+exception:                                        ^^^
+Running Gradle task 'assembleDebug'...                            106.7s
+√ Built build\app\outputs\flutter-apk\app-debug.apk
+Installing build\app\outputs\flutter-apk\app-debug.apk...           8.5s
+D/FlutterJNI(29970): Beginning load of flutter...
+D/FlutterJNI(29970): flutter (null) was loaded normally!
+I/flutter (29970): [IMPORTANT:flutter/shell/platform/android/android_context_vk_impeller.cc(62)] Using the Impeller rendering backend (Vulkan).
+Syncing files to device SM A127F...                                176ms
+
+Flutter run key commands.
+r Hot reload.
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on SM A127F is available at: http://127.0.0.1:49753/dsr_u0cWVEA=/
+The Flutter DevTools debugger and profiler on SM A127F is available at:
+http://127.0.0.1:9101?uri=http://127.0.0.1:49753/dsr_u0cWVEA=/
+I/Choreographer(29970): Skipped 612 frames!  The application may be doing too much work on its main thread.
+I/SurfaceView@38282b9(29970): onWindowVisibilityChanged(0) true io.flutter.embedding.android.FlutterSurfaceView{38282b9 V.E...... ......I. 0,0-0,0} of ViewRootImpl@51444f3[MainActivity]
+D/SurfaceView@38282b9(29970): updateSurface: has no frame
+I/ViewRootImpl@51444f3[MainActivity](29970): performTraversals params={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} ty=BASE_APPLICATION wanim=0x1030001
+I/ViewRootImpl@51444f3[MainActivity](29970):   fl=81810100
+I/ViewRootImpl@51444f3[MainActivity](29970):   pfl=12020040
+I/ViewRootImpl@51444f3[MainActivity](29970):   vsysui=500
+I/ViewRootImpl@51444f3[MainActivity](29970):   bhv=DEFAULT
+I/ViewRootImpl@51444f3[MainActivity](29970):   fitSides= naviIconColor=0}
+I/ViewRootImpl@51444f3[MainActivity](29970): performTraversals mFirst=true windowShouldResize=true viewVisibilityChanged=false mForceNextWindowRelayout=false params={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} ty=BASE_APPLICATION fmt=TRANSLUCENT wanim=0x1030001
+I/ViewRootImpl@51444f3[MainActivity](29970):   fl=81810100
+I/ViewRootImpl@51444f3[MainActivity](29970):   pfl=12020040
+I/ViewRootImpl@51444f3[MainActivity](29970):   vsysui=500
+I/ViewRootImpl@51444f3[MainActivity](29970):   bhv=DEFAULT
+I/ViewRootImpl@51444f3[MainActivity](29970):   fitSides= naviIconColor=0}
+I/ViewRootImpl@51444f3[MainActivity](29970): updateBlastSurfaceIfNeeded mBlastBufferQueue=null isSameSurfaceControl=false
+I/BLASTBufferQueue(29970): new BLASTBufferQueue, mName= ViewRootImpl@51444f3[MainActivity] mNativeObject= 0xb4000071b10fcf00 sc.mNativeObject= 0xb400007193d87300 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:2909 android.view.ViewRootImpl.relayoutWindow:9847 android.view.ViewRootImpl.performTraversals:3884 android.view.ViewRootImpl.doTraversal:3116 android.view.ViewRootImpl$TraversalRunnable.run:10885 android.view.Choreographer$CallbackRecord.run:1301 android.view.Choreographer$CallbackRecord.run:1309 android.view.Choreographer.doCallbacks:923 android.view.Choreographer.doFrame:852 android.view.Choreographer$FrameDisplayEventReceiver.run:1283
+I/BLASTBufferQueue(29970): update, w= 720 h= 1600 mName = ViewRootImpl@51444f3[MainActivity] mNativeObject= 0xb4000071b10fcf00 sc.mNativeObject= 0xb400007193d87300 format= -3 caller= android.graphics.BLASTBufferQueue.<init>:84 android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:2909 android.view.ViewRootImpl.relayoutWindow:9847 android.view.ViewRootImpl.performTraversals:3884 android.view.ViewRootImpl.doTraversal:3116 android.view.ViewRootImpl$TraversalRunnable.run:10885
+I/ViewRootImpl@51444f3[MainActivity](29970): Relayout returned: old=(0,0,720,1600) new=(0,0,720,1600) req=(720,1600)0 dur=30 res=0x3 s={true 0xb4000071b0f41000} ch=true seqId=0
+I/ViewRootImpl@51444f3[MainActivity](29970): mThreadedRenderer.initialize() mSurface={isValid=true 0xb4000071b0f41000} hwInitialized=true
+D/OpenGLRenderer(29970): eglCreateWindowSurface
+I/example.utangin(29970): Compiler allocated 6178KB to compile void android.view.ViewRootImpl.performTraversals()
+D/SurfaceView@38282b9(29970): updateSurface: has no frame
+I/SurfaceView@38282b9(29970): windowStopped(false) true io.flutter.embedding.android.FlutterSurfaceView{38282b9 V.E...... ......ID 0,0-720,1572} of ViewRootImpl@51444f3[MainActivity]
+D/SurfaceView@38282b9(29970): updateSurface: has no frame
+I/ViewRootImpl@51444f3[MainActivity](29970): reportNextDraw android.view.ViewRootImpl.performTraversals:4438 android.view.ViewRootImpl.doTraversal:3116 android.view.ViewRootImpl$TraversalRunnable.run:10885 android.view.Choreographer$CallbackRecord.run:1301 android.view.Choreographer$CallbackRecord.run:1309
+I/SurfaceView@38282b9(29970): Changes: creating=true format=true size=true visible=true alpha=false hint=false mUseAlpha=false visible=true left=true top=true
+I/BLASTBufferQueue(29970): update, w= 720 h= 1572 mName = null mNativeObject= 0xb4000071b10fd200 sc.mNativeObject= 0xb400007193d87c60 format= 4 caller= android.view.SurfaceView.createBlastSurfaceControls:1383 android.view.SurfaceView.updateSurface:1079 android.view.SurfaceView.lambda$new$0$android-view-SurfaceView:200 android.view.SurfaceView$$ExternalSyntheticLambda5.onPreDraw:2 android.view.ViewTreeObserver.dispatchOnPreDraw:1121 android.view.ViewRootImpl.performTraversals:4442
+I/SurfaceView@38282b9(29970): 58884793 Cur surface: Surface(name=null)/@0x6ea8f2f
+I/SurfaceView@38282b9(29970): pST: sr = Rect(0, 0 - 720, 1572) sw = 720 sh = 1572
+D/SurfaceView@38282b9(29970): performSurfaceTransaction RenderWorker position = [0, 0, 720, 1572] surfaceSize = 720x1572
+I/SurfaceView@38282b9(29970): applyTransactionOnVriDraw: vri = ViewRootImpl@51444f3[MainActivity] fRS = false t = 0xb4000071b10d7d00 android.view.SurfaceView.performSurfaceTransaction:959 android.view.SurfaceView.updateSurface:1105 android.view.SurfaceView.lambda$new$0$android-view-SurfaceView:200
+I/ViewRootImpl@51444f3[MainActivity](29970): applyTransactionOnDraw: mRemoved = false isHardwareEnabled = true t = 0xb4000071b10d7d00android.view.SurfaceView.applyTransactionOnVriDraw:2048 android.view.SurfaceView.performSurfaceTransaction:959 android.view.SurfaceView.updateSurface:1105 android.view.SurfaceView.lambda$new$0$android-view-SurfaceView:200 android.view.SurfaceView$$ExternalSyntheticLambda5.onPreDraw:2
+I/SurfaceView@38282b9(29970): updateSurface: mVisible = true mSurface.isValid() = true
+I/SurfaceView@38282b9(29970): updateSurface: mSurfaceCreated = false surfaceChanged = true visibleChanged = true
+I/SurfaceView@38282b9(29970): visibleChanged -- surfaceCreated
+I/SurfaceView@38282b9(29970): surfaceCreated 1 #8 io.flutter.embedding.android.FlutterSurfaceView{38282b9 V.E...... ......ID 0,0-720,1572}
+I/SurfaceView@38282b9(29970): surfaceChanged -- format=4 w=720 h=1572
+I/SurfaceView@38282b9(29970): surfaceChanged (720,1572) 1 #8 io.flutter.embedding.android.FlutterSurfaceView{38282b9 V.E...... ......ID 0,0-720,1572}
+I/SurfaceView@38282b9(29970): surfaceRedrawNeeded
+V/SurfaceView@38282b9(29970): Layout: x=0 y=0 w=720 h=1572, frame=Rect(0, 0 - 720, 1572)
+I/Choreographer(29970): Skipped 30 frames!  The application may be doing too much work on its main thread.
+I/DecorView(29970): notifyKeepScreenOnChanged: keepScreenOn=false
+I/ViewRootImpl@51444f3[MainActivity](29970): performTraversals params={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} ty=BASE_APPLICATION fmt=TRANSLUCENT wanim=0x1030001
+I/ViewRootImpl@51444f3[MainActivity](29970):   fl=81810100
+I/ViewRootImpl@51444f3[MainActivity](29970):   pfl=16020040
+I/ViewRootImpl@51444f3[MainActivity](29970):   vsysui=2500
+I/ViewRootImpl@51444f3[MainActivity](29970):   apr=LIGHT_STATUS_BARS
+I/ViewRootImpl@51444f3[MainActivity](29970):   bhv=DEFAULT
+I/ViewRootImpl@51444f3[MainActivity](29970):   fitSides= naviIconColor=0}
+I/ViewRootImpl@51444f3[MainActivity](29970): performTraversals mFirst=false windowShouldResize=false viewVisibilityChanged=false mForceNextWindowRelayout=false params={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} ty=BASE_APPLICATION fmt=TRANSLUCENT wanim=0x1030001
+I/ViewRootImpl@51444f3[MainActivity](29970):   fl=81810100
+I/ViewRootImpl@51444f3[MainActivity](29970):   pfl=16020040
+I/ViewRootImpl@51444f3[MainActivity](29970):   vsysui=2500
+I/ViewRootImpl@51444f3[MainActivity](29970):   apr=LIGHT_STATUS_BARS
+I/ViewRootImpl@51444f3[MainActivity](29970):   bhv=DEFAULT
+I/ViewRootImpl@51444f3[MainActivity](29970):   fitSides= naviIconColor=0}
+I/BLASTBufferQueue(29970): [SurfaceView[com.example.utangin/com.example.utangin.MainActivity]@0#1](f:0,a:0) onFrameAvailable the first frame is available
+I/ViewRootImpl@51444f3[MainActivity](29970): updateBlastSurfaceIfNeeded mBlastBufferQueue=0xb4000071b10fcf00 isSameSurfaceControl=true
+I/BLASTBufferQueue(29970): update, w= 720 h= 1600 mName = ViewRootImpl@51444f3[MainActivity] mNativeObject= 0xb4000071b10fcf00 sc.mNativeObject= 0xb40000718744fe00 format= -3 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:2898 android.view.ViewRootImpl.relayoutWindow:9847 android.view.ViewRootImpl.performTraversals:3884 android.view.ViewRootImpl.doTraversal:3116 android.view.ViewRootImpl$TraversalRunnable.run:10885 android.view.Choreographer$CallbackRecord.run:1301
+I/ViewRootImpl@51444f3[MainActivity](29970): Relayout returned: old=(0,0,720,1600) new=(0,0,720,1600) req=(720,1600)0 dur=73 res=0x1 s={true 0xb4000071b0f41000} ch=false seqId=0
+I/ViewRootImpl@51444f3[MainActivity](29970): updateBoundsLayer: t = android.view.SurfaceControl$Transaction@61aef4b sc = Surface(name=Bounds for - com.example.utangin/com.example.utangin.MainActivity@0)/@0xd62ed28 frame = 1
+I/ViewRootImpl@51444f3[MainActivity](29970): mWNT: t=0xb4000071b1099300 mBlastBufferQueue=0xb4000071b10fcf00 fn= 1 caller= android.view.ViewRootImpl.prepareSurfaces:2985 android.view.ViewRootImpl.performTraversals:4233 android.view.ViewRootImpl.doTraversal:3116
+I/ViewRootImpl@51444f3[MainActivity](29970): reportNextDraw android.view.ViewRootImpl.performTraversals:4438 android.view.ViewRootImpl.doTraversal:3116 android.view.ViewRootImpl$TraversalRunnable.run:10885 android.view.Choreographer$CallbackRecord.run:1301 android.view.Choreographer$CallbackRecord.run:1309
+I/ViewRootImpl@51444f3[MainActivity](29970): Setup new sync id=0
+I/ViewRootImpl@51444f3[MainActivity](29970): Setting syncFrameCallback
+I/ViewRootImpl@51444f3[MainActivity](29970): registerCallbacksForSync syncBuffer=false
+D/SurfaceView@38282b9(29970): updateSurfacePosition RenderWorker, frameNr = 1, position = [0, 0, 720, 1572] surfaceSize = 720x1572
+I/SurfaceView@38282b9(29970): uSP: rtp = Rect(0, 0 - 720, 1572) rtsw = 720 rtsh = 1572
+I/SurfaceView@38282b9(29970): onSSPAndSRT: pl = 0 pt = 0 sx = 1.0 sy = 1.0
+I/SurfaceView@38282b9(29970): aOrMT: ViewRootImpl@51444f3[MainActivity] t = android.view.SurfaceControl$Transaction@a73527 fN = 1 android.view.SurfaceView.-$$Nest$mapplyOrMergeTransaction:0 android.view.SurfaceView$SurfaceViewPositionUpdateListener.positionChanged:1537 android.graphics.RenderNode$CompositePositionUpdateListener.positionChanged:373
+I/ViewRootImpl@51444f3[MainActivity](29970): mWNT: t=0xb4000071b10d7e00 mBlastBufferQueue=0xb4000071b10fcf00 fn= 1 caller= android.view.SurfaceView.applyOrMergeTransaction:1455 android.view.SurfaceView.-$$Nest$mapplyOrMergeTransaction:0 android.view.SurfaceView$SurfaceViewPositionUpdateListener.positionChanged:1537
+I/ViewRootImpl@51444f3[MainActivity](29970): mWNT: t=0xb4000071b10d7d00 mBlastBufferQueue=0xb4000071b10fcf00 fn= 1 caller= android.view.ViewRootImpl.lambda$applyTransactionOnDraw$11$android-view-ViewRootImpl:12865 android.view.ViewRootImpl$$ExternalSyntheticLambda1.onFrameDraw:4 android.graphics.HardwareRenderer$FrameDrawingCallback.onFrameDraw:924
+I/ViewRootImpl@51444f3[MainActivity](29970): Received frameDrawingCallback syncResult=0 frameNum=1.
+I/ViewRootImpl@51444f3[MainActivity](29970): Setting up sync and frameCommitCallback
+I/BLASTBufferQueue(29970): [ViewRootImpl@51444f3[MainActivity]#0](f:0,a:0) onFrameAvailable the first frame is available
+I/ViewRootImpl@51444f3[MainActivity](29970): Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true
+D/OpenGLRenderer(29970): CFMS:: SetUp Pid : 29970    Tid : 30034
+I/ViewRootImpl@51444f3[MainActivity](29970): onSyncComplete
+I/ViewRootImpl@51444f3[MainActivity](29970): setupSync seqId=0 mSyncId=0 fn=1 caller=android.view.ViewRootImpl$$ExternalSyntheticLambda11.accept:6 android.window.SurfaceSyncer.lambda$setupSync$1$android-window-SurfaceSyncer:128 android.window.SurfaceSyncer$$ExternalSyntheticLambda1.accept:8 android.window.SurfaceSyncer$SyncSet.checkIfSyncIsComplete:382 android.window.SurfaceSyncer$SyncSet.markSyncReady:359 android.window.SurfaceSyncer.markSyncReady:151 android.view.ViewRootImpl.performTraversals:4503
+I/ViewRootImpl@51444f3[MainActivity](29970): reportDrawFinished seqId=0 mSyncId=-1 fn=1 mSurfaceChangedTransaction=0xb4000071b0f36e00
+I/SurfaceView@38282b9(29970): finishedDrawing
+I/ViewRootImpl@51444f3[MainActivity](29970): MSG_WINDOW_FOCUS_CHANGED 1 0
+I/ViewRootImpl@51444f3[MainActivity](29970): mThreadedRenderer.initializeIfNeeded()#2 mSurface={isValid=true 0xb4000071b0f41000}
+D/InputMethodManager(29970): startInputInner - Id : 0
+I/InputMethodManager(29970): startInputInner - mService.startInputOrWindowGainedFocus
+D/InputMethodManager(29970): startInputInner - Id : 0
+D/InsetsController(29970): onStateChanged: InsetsState: {mDisplayFrame=Rect(0, 0 - 720, 1600), mDisplayCutout=DisplayCutout{insets=Rect(0, 43 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(296, 0 - 424, 43), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=720 displayHeight=1600 physicalDisplayWidth=720 physicalDisplayHeight=1600 density={1.875} cutoutSpec={M 0,0 H -34.13333333333333 V 22.93333333333333 H 34.13333333333333 V 0 H 0 Z @dp} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}}}, mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=60, center=Point(60, 60)}, RoundedCorner{position=TopRight, radius=60, center=Point(660, 60)}, RoundedCorner{position=BottomRight, radius=60, center=Point(660, 1540)}, RoundedCorner{position=BottomLeft, radius=60, center=Point(60, 1540)}]}  mRoundedCornerFrame=Rect(0, 0 - 720, 1600), mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(637, 0 - 720, 45) rotation=0}, mSources= { InsetsSource: {mType=ITYPE_STATUS_BAR, mFrame=[0,0][720,45], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_NAVIGATION_BAR, mFrame=[0,1572][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_LEFT_GESTURES, mFrame=[0,0][56,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_RIGHT_GESTURES, mFrame=[664,0][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_TOP_MANDATORY_GESTURES, mFrame=[0,0][720,66], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_BOTTOM_MANDATORY_GESTURES, mFrame=[0,1540][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_LEFT_DISPLAY_CUTOUT, mFrame=[0,0][-100000,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_TOP_DISPLAY_CUTOUT, mFrame=[0,0][720,43], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_RIGHT_DISPLAY_CUTOUT, mFrame=[100000,0][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_BOTTOM_DISPLAY_CUTOUT, mFrame=[0,100000][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_TOP_TAPPABLE_ELEMENT, mFrame=[0,0][720,45], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_BOTTOM_TAPPABLE_ELEMENT, mFrame=[0,0][0,0], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_IME, mFrame=[0,0][0,0], mVisibleFrame=[0,928][720,1600], mVisible=false, mInsetsRoundedCornerFrame=false} } host=com.example.utangin/com.example.utangin.MainActivity from=android.view.ViewRootImpl$ViewRootHandler.handleMessageImpl:6740
+E/flutter (29970): [ERROR:flutter/runtime/dart_vm_initializer.cc(40)] Unhandled Exception: Instance of 'FileNotFoundError'
+E/flutter (29970): #0      DotEnv._getEntriesFromFile (package:flutter_dotenv/src/dotenv.dart:172:7)
+E/flutter (29970): <asynchronous suspension>
+E/flutter (29970): #1      DotEnv.load (package:flutter_dotenv/src/dotenv.dart:124:23)
+E/flutter (29970): <asynchronous suspension>
+E/flutter (29970): #2      ApiService.init (package:utangin/services/api_service.dart:16:5)
+E/flutter (29970): <asynchronous suspension>
+E/flutter (29970): #3      _SplashScreenState._navigateToNextScreen (package:utangin/screens/splash_screen.dart:26:5)
+E/flutter (29970): <asynchronous suspension>
+E/flutter (29970):
+D/ProfileInstaller(29970): Installing profile for com.example.utangin
+D/WindowOnBackDispatcher(29970): onBackInvoked, viewRoot=ViewRootImpl@51444f3[MainActivity], callback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@26c8c29
+I/ViewRootImpl@51444f3[MainActivity](29970): ViewPostIme key 0
+D/Activity(29970): onKeyDown(KEYCODE_BACK)
+I/ViewRootImpl@51444f3[MainActivity](29970): ViewPostIme key 1
+D/Activity(29970): onKeyUp(KEYCODE_BACK) isTracking()=true isCanceled()=false hasCallback=false
+I/ViewRootImpl@51444f3[MainActivity](29970): MSG_WINDOW_FOCUS_CHANGED 0 0
+D/InputTransport(29970): Input channel destroyed: 'ClientS', fd=149
+I/ViewRootImpl@51444f3[MainActivity](29970): handleAppVisibility mAppVisible = true visible = false
+I/ViewRootImpl@51444f3[MainActivity](29970): stopped(true) old = false
+I/ViewRootImpl@51444f3[MainActivity](29970): WindowStopped on com.example.utangin/com.example.utangin.MainActivity set to true
+D/SurfaceView@38282b9(29970): windowPositionLost, frameNr = 0
+I/SurfaceView@38282b9(29970): aOrMT: ViewRootImpl@51444f3[MainActivity] t = android.view.SurfaceControl$Transaction@5bff058 fN = 0 android.view.SurfaceView.-$$Nest$mapplyOrMergeTransaction:0 android.view.SurfaceView$SurfaceViewPositionUpdateListener.positionLost:1568 android.graphics.RenderNode$CompositePositionUpdateListener.positionLost:380
+I/ViewRootImpl@51444f3[MainActivity](29970): mWNT: t=0xb4000071b0f36c00 mBlastBufferQueue=0xb4000071b10fcf00 fn= 0 caller= android.view.SurfaceView.applyOrMergeTransaction:1455 android.view.SurfaceView.-$$Nest$mapplyOrMergeTransaction:0 android.view.SurfaceView$SurfaceViewPositionUpdateListener.positionLost:1568
+I/SurfaceView@38282b9(29970): windowStopped(true) false io.flutter.embedding.android.FlutterSurfaceView{38282b9 V.E...... ........ 0,0-720,1572} of ViewRootImpl@51444f3[MainActivity]
+I/SurfaceView@38282b9(29970): Changes: creating=false format=false size=false visible=true alpha=false hint=false mUseAlpha=false visible=true left=false top=false
+I/SurfaceView@38282b9(29970): 58884793 Cur surface: Surface(name=null)/@0x6ea8f2f
+I/SurfaceView@38282b9(29970): applyTransactionOnVriDraw: vri = ViewRootImpl@51444f3[MainActivity] fRS = false t = 0xb4000071b110e200 android.view.SurfaceView.performSurfaceTransaction:959 android.view.SurfaceView.updateSurface:1105 android.view.SurfaceView.setWindowStopped:335
+I/ViewRootImpl@51444f3[MainActivity](29970): applyTransactionOnDraw: mRemoved = false isHardwareEnabled = true t = 0xb4000071b110e200android.view.SurfaceView.applyTransactionOnVriDraw:2048 android.view.SurfaceView.performSurfaceTransaction:959 android.view.SurfaceView.updateSurface:1105 android.view.SurfaceView.setWindowStopped:335 android.view.SurfaceView.surfaceDestroyed:1863
+I/SurfaceView@38282b9(29970): surfaceDestroyed
+I/SurfaceView@38282b9(29970): surfaceDestroyed callback.size 1 #1 io.flutter.embedding.android.FlutterSurfaceView{38282b9 V.E...... ........ 0,0-720,1572}
+I/SurfaceView@38282b9(29970): updateSurface: mVisible = false mSurface.isValid() = true
+I/SurfaceView@38282b9(29970): releaseSurfaces: viewRoot = ViewRootImpl@51444f3[MainActivity]
+I/SurfaceView@38282b9(29970): applyTransactionOnVriDraw: vri = ViewRootImpl@51444f3[MainActivity] fRS = true t = 0xb4000071b0ff4a00 android.view.SurfaceView.releaseSurfaces:858 android.view.SurfaceView.updateSurface:1172 android.view.SurfaceView.setWindowStopped:335
+I/SurfaceView@38282b9(29970): applyTransactionOnVriDraw: viewRoot.applyTransactionOnDrawFromReleaseSurfaces  
+I/ViewRootImpl@51444f3[MainActivity](29970): from releaseSurfaces t.apply t = 0xb4000071b0ff4a00
+V/SurfaceView@38282b9(29970): Layout: x=0 y=0 w=720 h=1572, frame=Rect(0, 0 - 720, 1572)
+D/SurfaceView@38282b9(29970): updateSurface: surface is not valid
+I/SurfaceView@38282b9(29970): releaseSurfaces: viewRoot = ViewRootImpl@51444f3[MainActivity]
+I/SurfaceView@38282b9(29970): applyTransactionOnVriDraw: vri = ViewRootImpl@51444f3[MainActivity] fRS = true t = 0xb40000721b100000 android.view.SurfaceView.releaseSurfaces:858 android.view.SurfaceView.updateSurface:998 android.view.SurfaceView.setVisibility:392
+I/SurfaceView@38282b9(29970): applyTransactionOnVriDraw: viewRoot.applyTransactionOnDrawFromReleaseSurfaces  
+I/ViewRootImpl@51444f3[MainActivity](29970): from releaseSurfaces t.apply t = 0xb40000721b100000
+I/MSHandlerLifeCycle(29970): removeMultiSplitHandler: no exist. decor=DecorView@24e27d6[MainActivity]        
+I/SurfaceView@38282b9(29970): onWindowVisibilityChanged(8) false io.flutter.embedding.android.FlutterSurfaceView{38282b9 G.E...... ......I. 0,0-720,1572} of ViewRootImpl@51444f3[MainActivity]
+D/SurfaceView@38282b9(29970): updateSurface: surface is not valid
+I/SurfaceView@38282b9(29970): releaseSurfaces: viewRoot = ViewRootImpl@51444f3[MainActivity]
+I/SurfaceView@38282b9(29970): applyTransactionOnVriDraw: vri = ViewRootImpl@51444f3[MainActivity] fRS = true t = 0xb400007193dfbf00 android.view.SurfaceView.releaseSurfaces:858 android.view.SurfaceView.updateSurface:998 android.view.SurfaceView.onWindowVisibilityChanged:371
+I/SurfaceView@38282b9(29970): applyTransactionOnVriDraw: viewRoot.applyTransactionOnDrawFromReleaseSurfaces  
+I/ViewRootImpl@51444f3[MainActivity](29970): from releaseSurfaces t.apply t = 0xb400007193dfbf00
+D/SurfaceView@38282b9(29970): updateSurface: surface is not valid
+I/SurfaceView@38282b9(29970): releaseSurfaces: viewRoot = ViewRootImpl@51444f3[MainActivity]
+I/SurfaceView@38282b9(29970): applyTransactionOnVriDraw: vri = ViewRootImpl@51444f3[MainActivity] fRS = true t = 0xb40000718e1c1600 android.view.SurfaceView.releaseSurfaces:858 android.view.SurfaceView.updateSurface:998 android.view.SurfaceView.onDetachedFromWindow:496
+I/SurfaceView@38282b9(29970): applyTransactionOnVriDraw: viewRoot.applyTransactionOnDrawFromReleaseSurfaces  
+I/ViewRootImpl@51444f3[MainActivity](29970): from releaseSurfaces t.apply t = 0xb40000718e1c1600
+I/SurfaceView@38282b9(29970): onDetachedFromWindow: tryReleaseSurfaces()
+I/SurfaceView@38282b9(29970): releaseSurfaces: viewRoot = ViewRootImpl@51444f3[MainActivity]
+I/SurfaceView@38282b9(29970): applyTransactionOnVriDraw: vri = ViewRootImpl@51444f3[MainActivity] fRS = true t = 0xb4000071b1239800 android.view.SurfaceView.releaseSurfaces:858 android.view.SurfaceView.onDetachedFromWindow:500 android.view.View.dispatchDetachedFromWindow:22538
+I/SurfaceView@38282b9(29970): applyTransactionOnVriDraw: viewRoot.applyTransactionOnDrawFromReleaseSurfaces  
+I/ViewRootImpl@51444f3[MainActivity](29970): from releaseSurfaces t.apply t = 0xb4000071b1239800
+I/MSHandlerLifeCycle(29970): removeMultiSplitHandler: no exist. decor=DecorView@24e27d6[MainActivity]        
+D/OpenGLRenderer(29970): setSurface called with nullptr
+D/OpenGLRenderer(29970): setSurface() destroyed EGLSurface
+D/OpenGLRenderer(29970): destroyEglSurface
+I/ViewRootImpl@51444f3[MainActivity](29970): dispatchDetachedFromWindow
+D/InputTransport(29970): Input channel destroyed: '74530f7', fd=117
+I/Choreographer(29970): Skipped 56 frames!  The application may be doing too much work on its main thread.
+I/flutter (29970): [IMPORTANT:flutter/shell/platform/android/android_context_vk_impeller.cc(62)] Using the Impeller rendering backend (Vulkan).
+I/DecorView(29970): [INFO] isPopOver=false config=true
+I/DecorView(29970): updateCaptionType: isFloating=false isApplication=true hasWindowDecorCaption=false this=DecorView@a68f91b[]
+D/DecorView(29970): setCaptionType = 0, this = DecorView@a68f91b[]
+I/DecorView(29970): getCurrentDensityDpi: from real metrics. densityDpi=300 msg=resources_loaded
+I/DecorView(29970): setWindowBackground: isPopOver=false color=ff000000 d=android.graphics.drawable.ColorDrawable@7a7ab8
+I/MSHandlerLifeCycle(29970): check: return. pkg=com.example.utangin parent=null callers=com.android.internal.policy.DecorView.setVisibility:4412 android.app.ActivityThread.handleResumeActivity:5476 android.app.servertransaction.ResumeActivityItem.execute:54 android.app.servertransaction.ActivityTransactionItem.execute:45 android.app.servertransaction.TransactionExecutor.executeLifecycleState:176
+I/MSHandlerLifeCycle(29970): removeMultiSplitHandler: no exist. decor=DecorView@a68f91b[]
+D/NativeCustomFrequencyManager(29970): [NativeCFMS] BpCustomFrequencyManager::BpCustomFrequencyManager()     
+I/DecorView(29970): notifyKeepScreenOnChanged: keepScreenOn=false
+D/InsetsController(29970): onStateChanged: InsetsState: {mDisplayFrame=Rect(0, 0 - 720, 1600), mDisplayCutout=DisplayCutout{insets=Rect(0, 43 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(296, 0 - 424, 43), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=720 displayHeight=1600 physicalDisplayWidth=720 physicalDisplayHeight=1600 density={1.875} cutoutSpec={M 0,0 H -34.13333333333333 V 22.93333333333333 H 34.13333333333333 V 0 H 0 Z @dp} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}}}, mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=60, center=Point(60, 60)}, RoundedCorner{position=TopRight, radius=60, center=Point(660, 60)}, RoundedCorner{position=BottomRight, radius=60, center=Point(660, 1540)}, RoundedCorner{position=BottomLeft, radius=60, center=Point(60, 1540)}]}  mRoundedCornerFrame=Rect(0, 0 - 720, 1600), mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(637, 0 - 720, 45) rotation=0}, mSources= { InsetsSource: {mType=ITYPE_STATUS_BAR, mFrame=[0,0][720,45], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_NAVIGATION_BAR, mFrame=[0,1572][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_LEFT_GESTURES, mFrame=[0,0][56,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_RIGHT_GESTURES, mFrame=[664,0][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_TOP_MANDATORY_GESTURES, mFrame=[0,0][720,66], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_BOTTOM_MANDATORY_GESTURES, mFrame=[0,1540][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_LEFT_DISPLAY_CUTOUT, mFrame=[0,0][-100000,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_TOP_DISPLAY_CUTOUT, mFrame=[0,0][720,43], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_RIGHT_DISPLAY_CUTOUT, mFrame=[100000,0][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_BOTTOM_DISPLAY_CUTOUT, mFrame=[0,100000][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_TOP_TAPPABLE_ELEMENT, mFrame=[0,0][720,45], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_BOTTOM_TAPPABLE_ELEMENT, mFrame=[0,0][0,0], mVisible=true, mInsetsRoundedCornerFrame=false} } host=com.example.utangin/com.example.utangin.MainActivity from=android.view.ViewRootImpl.setView:1732
+I/ViewRootImpl@b940bf7[MainActivity](29970): setView = com.android.internal.policy.DecorView@a68f91b TM=true 
+I/MSHandlerLifeCycle(29970): removeMultiSplitHandler: no exist. decor=DecorView@a68f91b[MainActivity]        
+I/Choreographer(29970): Skipped 293 frames!  The application may be doing too much work on its main thread.
+I/SurfaceView@b913f59(29970): onWindowVisibilityChanged(0) true io.flutter.embedding.android.FlutterSurfaceView{b913f59 V.E...... ......I. 0,0-0,0} of ViewRootImpl@b940bf7[MainActivity]
+D/SurfaceView@b913f59(29970): updateSurface: has no frame
+I/ViewRootImpl@b940bf7[MainActivity](29970): performTraversals params={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} ty=BASE_APPLICATION wanim=0x1030001
+I/ViewRootImpl@b940bf7[MainActivity](29970):   fl=81810100
+I/ViewRootImpl@b940bf7[MainActivity](29970):   pfl=12020040
+I/ViewRootImpl@b940bf7[MainActivity](29970):   vsysui=500
+I/ViewRootImpl@b940bf7[MainActivity](29970):   bhv=DEFAULT
+I/ViewRootImpl@b940bf7[MainActivity](29970):   fitSides= naviIconColor=0}
+I/ViewRootImpl@b940bf7[MainActivity](29970): performTraversals mFirst=true windowShouldResize=true viewVisibilityChanged=false mForceNextWindowRelayout=false params={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} ty=BASE_APPLICATION fmt=TRANSLUCENT wanim=0x1030001
+I/ViewRootImpl@b940bf7[MainActivity](29970):   fl=81810100
+I/ViewRootImpl@b940bf7[MainActivity](29970):   pfl=12020040
+I/ViewRootImpl@b940bf7[MainActivity](29970):   vsysui=500
+I/ViewRootImpl@b940bf7[MainActivity](29970):   bhv=DEFAULT
+I/ViewRootImpl@b940bf7[MainActivity](29970):   fitSides= naviIconColor=0}
+I/ViewRootImpl@b940bf7[MainActivity](29970): updateBlastSurfaceIfNeeded mBlastBufferQueue=null isSameSurfaceControl=false
+I/BLASTBufferQueue(29970): new BLASTBufferQueue, mName= ViewRootImpl@b940bf7[MainActivity] mNativeObject= 0xb4000071b10fcc00 sc.mNativeObject= 0xb40000721b36e060 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:2909 android.view.ViewRootImpl.relayoutWindow:9847 android.view.ViewRootImpl.performTraversals:3884 android.view.ViewRootImpl.doTraversal:3116 android.view.ViewRootImpl$TraversalRunnable.run:10885 android.view.Choreographer$CallbackRecord.run:1301 android.view.Choreographer$CallbackRecord.run:1309 android.view.Choreographer.doCallbacks:923 android.view.Choreographer.doFrame:852 android.view.Choreographer$FrameDisplayEventReceiver.run:1283
+I/BLASTBufferQueue(29970): update, w= 720 h= 1600 mName = ViewRootImpl@b940bf7[MainActivity] mNativeObject= 0xb4000071b10fcc00 sc.mNativeObject= 0xb40000721b36e060 format= -3 caller= android.graphics.BLASTBufferQueue.<init>:84 android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:2909 android.view.ViewRootImpl.relayoutWindow:9847 android.view.ViewRootImpl.performTraversals:3884 android.view.ViewRootImpl.doTraversal:3116 android.view.ViewRootImpl$TraversalRunnable.run:10885
+I/ViewRootImpl@b940bf7[MainActivity](29970): Relayout returned: old=(0,0,720,1600) new=(0,0,720,1600) req=(720,1600)0 dur=22 res=0x3 s={true 0xb4000071b1187800} ch=true seqId=0
+I/ViewRootImpl@b940bf7[MainActivity](29970): mThreadedRenderer.initialize() mSurface={isValid=true 0xb4000071b1187800} hwInitialized=true
+D/OpenGLRenderer(29970): eglCreateWindowSurface
+D/SurfaceView@b913f59(29970): updateSurface: has no frame
+I/SurfaceView@b913f59(29970): windowStopped(false) true io.flutter.embedding.android.FlutterSurfaceView{b913f59 V.E...... ......ID 0,0-720,1572} of ViewRootImpl@b940bf7[MainActivity]
+D/SurfaceView@b913f59(29970): updateSurface: has no frame
+I/ViewRootImpl@b940bf7[MainActivity](29970): reportNextDraw android.view.ViewRootImpl.performTraversals:4438 android.view.ViewRootImpl.doTraversal:3116 android.view.ViewRootImpl$TraversalRunnable.run:10885 android.view.Choreographer$CallbackRecord.run:1301 android.view.Choreographer$CallbackRecord.run:1309
+I/SurfaceView@b913f59(29970): Changes: creating=true format=true size=true visible=true alpha=false hint=false mUseAlpha=false visible=true left=true top=true
+I/BLASTBufferQueue(29970): update, w= 720 h= 1572 mName = null mNativeObject= 0xb4000071b10fd200 sc.mNativeObject= 0xb40000721b36e420 format= 4 caller= android.view.SurfaceView.createBlastSurfaceControls:1383 android.view.SurfaceView.updateSurface:1079 android.view.SurfaceView.lambda$new$0$android-view-SurfaceView:200 android.view.SurfaceView$$ExternalSyntheticLambda5.onPreDraw:2 android.view.ViewTreeObserver.dispatchOnPreDraw:1121 android.view.ViewRootImpl.performTraversals:4442
+I/SurfaceView@b913f59(29970): 194068313 Cur surface: Surface(name=null)/@0x273b0c9
+I/SurfaceView@b913f59(29970): pST: sr = Rect(0, 0 - 720, 1572) sw = 720 sh = 1572
+D/SurfaceView@b913f59(29970): performSurfaceTransaction RenderWorker position = [0, 0, 720, 1572] surfaceSize = 720x1572
+I/SurfaceView@b913f59(29970): applyTransactionOnVriDraw: vri = ViewRootImpl@b940bf7[MainActivity] fRS = false t = 0xb4000071b0f36200 android.view.SurfaceView.performSurfaceTransaction:959 android.view.SurfaceView.updateSurface:1105 android.view.SurfaceView.lambda$new$0$android-view-SurfaceView:200
+I/ViewRootImpl@b940bf7[MainActivity](29970): applyTransactionOnDraw: mRemoved = false isHardwareEnabled = true t = 0xb4000071b0f36200android.view.SurfaceView.applyTransactionOnVriDraw:2048 android.view.SurfaceView.performSurfaceTransaction:959 android.view.SurfaceView.updateSurface:1105 android.view.SurfaceView.lambda$new$0$android-view-SurfaceView:200 android.view.SurfaceView$$ExternalSyntheticLambda5.onPreDraw:2
+I/SurfaceView@b913f59(29970): updateSurface: mVisible = true mSurface.isValid() = true
+I/SurfaceView@b913f59(29970): updateSurface: mSurfaceCreated = false surfaceChanged = true visibleChanged = true
+I/SurfaceView@b913f59(29970): visibleChanged -- surfaceCreated
+I/SurfaceView@b913f59(29970): surfaceCreated 1 #8 io.flutter.embedding.android.FlutterSurfaceView{b913f59 V.E...... ......ID 0,0-720,1572}
+I/SurfaceView@b913f59(29970): surfaceChanged -- format=4 w=720 h=1572
+I/SurfaceView@b913f59(29970): surfaceChanged (720,1572) 1 #8 io.flutter.embedding.android.FlutterSurfaceView{b913f59 V.E...... ......ID 0,0-720,1572}
+I/SurfaceView@b913f59(29970): surfaceRedrawNeeded
+V/SurfaceView@b913f59(29970): Layout: x=0 y=0 w=720 h=1572, frame=Rect(0, 0 - 720, 1572)
+I/Choreographer(29970): Skipped 34 frames!  The application may be doing too much work on its main thread.
+I/DecorView(29970): notifyKeepScreenOnChanged: keepScreenOn=false
+I/BLASTBufferQueue(29970): [SurfaceView[com.example.utangin/com.example.utangin.MainActivity]@0#3](f:0,a:0) onFrameAvailable the first frame is available
+I/ViewRootImpl@b940bf7[MainActivity](29970): performTraversals params={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} ty=BASE_APPLICATION fmt=TRANSLUCENT wanim=0x1030001
+I/ViewRootImpl@b940bf7[MainActivity](29970):   fl=81810100
+I/ViewRootImpl@b940bf7[MainActivity](29970):   pfl=16020040
+I/ViewRootImpl@b940bf7[MainActivity](29970):   vsysui=2500
+I/ViewRootImpl@b940bf7[MainActivity](29970):   apr=LIGHT_STATUS_BARS
+I/ViewRootImpl@b940bf7[MainActivity](29970):   bhv=DEFAULT
+I/ViewRootImpl@b940bf7[MainActivity](29970):   fitSides= naviIconColor=0}
+I/ViewRootImpl@b940bf7[MainActivity](29970): performTraversals mFirst=false windowShouldResize=false viewVisibilityChanged=false mForceNextWindowRelayout=false params={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} ty=BASE_APPLICATION fmt=TRANSLUCENT wanim=0x1030001
+I/ViewRootImpl@b940bf7[MainActivity](29970):   fl=81810100
+I/ViewRootImpl@b940bf7[MainActivity](29970):   pfl=16020040
+I/ViewRootImpl@b940bf7[MainActivity](29970):   vsysui=2500
+I/ViewRootImpl@b940bf7[MainActivity](29970):   apr=LIGHT_STATUS_BARS
+I/ViewRootImpl@b940bf7[MainActivity](29970):   bhv=DEFAULT
+I/ViewRootImpl@b940bf7[MainActivity](29970):   fitSides= naviIconColor=0}
+I/ViewRootImpl@b940bf7[MainActivity](29970): updateBlastSurfaceIfNeeded mBlastBufferQueue=0xb4000071b10fcc00 isSameSurfaceControl=true
+I/BLASTBufferQueue(29970): update, w= 720 h= 1600 mName = ViewRootImpl@b940bf7[MainActivity] mNativeObject= 0xb4000071b10fcc00 sc.mNativeObject= 0xb40000718e105640 format= -3 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:2898 android.view.ViewRootImpl.relayoutWindow:9847 android.view.ViewRootImpl.performTraversals:3884 android.view.ViewRootImpl.doTraversal:3116 android.view.ViewRootImpl$TraversalRunnable.run:10885 android.view.Choreographer$CallbackRecord.run:1301
+I/ViewRootImpl@b940bf7[MainActivity](29970): Relayout returned: old=(0,0,720,1600) new=(0,0,720,1600) req=(720,1600)0 dur=20 res=0x1 s={true 0xb4000071b1187800} ch=false seqId=0
+I/ViewRootImpl@b940bf7[MainActivity](29970): updateBoundsLayer: t = android.view.SurfaceControl$Transaction@ac8c1fc sc = Surface(name=Bounds for - com.example.utangin/com.example.utangin.MainActivity@0)/@0x77d9085 frame = 1
+I/ViewRootImpl@b940bf7[MainActivity](29970): mWNT: t=0xb40000721b100100 mBlastBufferQueue=0xb4000071b10fcc00 fn= 1 caller= android.view.ViewRootImpl.prepareSurfaces:2985 android.view.ViewRootImpl.performTraversals:4233 android.view.ViewRootImpl.doTraversal:3116
+I/ViewRootImpl@b940bf7[MainActivity](29970): reportNextDraw android.view.ViewRootImpl.performTraversals:4438 android.view.ViewRootImpl.doTraversal:3116 android.view.ViewRootImpl$TraversalRunnable.run:10885 android.view.Choreographer$CallbackRecord.run:1301 android.view.Choreographer$CallbackRecord.run:1309
+I/ViewRootImpl@b940bf7[MainActivity](29970): Setup new sync id=0
+I/ViewRootImpl@b940bf7[MainActivity](29970): Setting syncFrameCallback
+I/ViewRootImpl@b940bf7[MainActivity](29970): registerCallbacksForSync syncBuffer=false
+I/ViewRootImpl@b940bf7[MainActivity](29970): mWNT: t=0xb4000071b0f36200 mBlastBufferQueue=0xb4000071b10fcc00 fn= 1 caller= android.view.ViewRootImpl.lambda$applyTransactionOnDraw$11$android-view-ViewRootImpl:12865 android.view.ViewRootImpl$$ExternalSyntheticLambda1.onFrameDraw:4 android.graphics.HardwareRenderer$FrameDrawingCallback.onFrameDraw:924
+I/ViewRootImpl@b940bf7[MainActivity](29970): Received frameDrawingCallback syncResult=0 frameNum=1.
+I/ViewRootImpl@b940bf7[MainActivity](29970): Setting up sync and frameCommitCallback
+D/SurfaceView@b913f59(29970): updateSurfacePosition RenderWorker, frameNr = 1, position = [0, 0, 720, 1572] surfaceSize = 720x1572
+I/SurfaceView@b913f59(29970): uSP: rtp = Rect(0, 0 - 720, 1572) rtsw = 720 rtsh = 1572
+I/SurfaceView@b913f59(29970): onSSPAndSRT: pl = 0 pt = 0 sx = 1.0 sy = 1.0
+I/SurfaceView@b913f59(29970): aOrMT: ViewRootImpl@b940bf7[MainActivity] t = android.view.SurfaceControl$Transaction@9de01e8 fN = 1 android.view.SurfaceView.-$$Nest$mapplyOrMergeTransaction:0 android.view.SurfaceView$SurfaceViewPositionUpdateListener.positionChanged:1537 android.graphics.RenderNode$CompositePositionUpdateListener.positionChanged:373
+I/ViewRootImpl@b940bf7[MainActivity](29970): mWNT: t=0xb4000071b0f36500 mBlastBufferQueue=0xb4000071b10fcc00 fn= 1 caller= android.view.SurfaceView.applyOrMergeTransaction:1455 android.view.SurfaceView.-$$Nest$mapplyOrMergeTransaction:0 android.view.SurfaceView$SurfaceViewPositionUpdateListener.positionChanged:1537
+I/BLASTBufferQueue(29970): [ViewRootImpl@b940bf7[MainActivity]#2](f:0,a:0) onFrameAvailable the first frame is available
+I/ViewRootImpl@b940bf7[MainActivity](29970): Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true
+D/OpenGLRenderer(29970): CFMS:: SetUp Pid : 29970    Tid : 30034
+I/ViewRootImpl@b940bf7[MainActivity](29970): onSyncComplete
+I/ViewRootImpl@b940bf7[MainActivity](29970): setupSync seqId=0 mSyncId=0 fn=1 caller=android.view.ViewRootImpl$$ExternalSyntheticLambda11.accept:6 android.window.SurfaceSyncer.lambda$setupSync$1$android-window-SurfaceSyncer:128 android.window.SurfaceSyncer$$ExternalSyntheticLambda1.accept:8 android.window.SurfaceSyncer$SyncSet.checkIfSyncIsComplete:382 android.window.SurfaceSyncer$SyncSet.markSyncReady:359 android.window.SurfaceSyncer.markSyncReady:151 android.view.ViewRootImpl.performTraversals:4503
+I/ViewRootImpl@b940bf7[MainActivity](29970): reportDrawFinished seqId=0 mSyncId=-1 fn=1 mSurfaceChangedTransaction=0xb40000722852da00
+I/SurfaceView@b913f59(29970): finishedDrawing
+I/ViewRootImpl@b940bf7[MainActivity](29970): MSG_WINDOW_FOCUS_CHANGED 1 0
+I/ViewRootImpl@b940bf7[MainActivity](29970): mThreadedRenderer.initializeIfNeeded()#2 mSurface={isValid=true 0xb4000071b1187800}
+D/InputMethodManager(29970): startInputInner - Id : 0
+I/InputMethodManager(29970): startInputInner - mService.startInputOrWindowGainedFocus
+D/InsetsController(29970): onStateChanged: InsetsState: {mDisplayFrame=Rect(0, 0 - 720, 1600), mDisplayCutout=DisplayCutout{insets=Rect(0, 43 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(296, 0 - 424, 43), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=720 displayHeight=1600 physicalDisplayWidth=720 physicalDisplayHeight=1600 density={1.875} cutoutSpec={M 0,0 H -34.13333333333333 V 22.93333333333333 H 34.13333333333333 V 0 H 0 Z @dp} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}}}, mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=60, center=Point(60, 60)}, RoundedCorner{position=TopRight, radius=60, center=Point(660, 60)}, RoundedCorner{position=BottomRight, radius=60, center=Point(660, 1540)}, RoundedCorner{position=BottomLeft, radius=60, center=Point(60, 1540)}]}  mRoundedCornerFrame=Rect(0, 0 - 720, 1600), mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(637, 0 - 720, 45) rotation=0}, mSources= { InsetsSource: {mType=ITYPE_STATUS_BAR, mFrame=[0,0][720,45], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_NAVIGATION_BAR, mFrame=[0,1572][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_LEFT_GESTURES, mFrame=[0,0][56,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_RIGHT_GESTURES, mFrame=[664,0][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_TOP_MANDATORY_GESTURES, mFrame=[0,0][720,66], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_BOTTOM_MANDATORY_GESTURES, mFrame=[0,1540][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_LEFT_DISPLAY_CUTOUT, mFrame=[0,0][-100000,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_TOP_DISPLAY_CUTOUT, mFrame=[0,0][720,43], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_RIGHT_DISPLAY_CUTOUT, mFrame=[100000,0][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_BOTTOM_DISPLAY_CUTOUT, mFrame=[0,100000][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_TOP_TAPPABLE_ELEMENT, mFrame=[0,0][720,45], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_BOTTOM_TAPPABLE_ELEMENT, mFrame=[0,0][0,0], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_IME, mFrame=[0,0][0,0], mVisibleFrame=[0,928][720,1600], mVisible=false, mInsetsRoundedCornerFrame=false} } host=com.example.utangin/com.example.utangin.MainActivity from=android.view.ViewRootImpl$ViewRootHandler.handleMessageImpl:6740
+E/flutter (29970): [ERROR:flutter/runtime/dart_vm_initializer.cc(40)] Unhandled Exception: Instance of 'FileNotFoundError'
+E/flutter (29970): #0      DotEnv._getEntriesFromFile (package:flutter_dotenv/src/dotenv.dart:172:7)
+E/flutter (29970): <asynchronous suspension>
+E/flutter (29970): #1      DotEnv.load (package:flutter_dotenv/src/dotenv.dart:124:23)
+E/flutter (29970): <asynchronous suspension>
+E/flutter (29970): #2      ApiService.init (package:utangin/services/api_service.dart:16:5)
+E/flutter (29970): <asynchronous suspension>
+E/flutter (29970): #3      _SplashScreenState._navigateToNextScreen (package:utangin/screens/splash_screen.dart:26:5)
+E/flutter (29970): <asynchronous suspension>
+E/flutter (29970):

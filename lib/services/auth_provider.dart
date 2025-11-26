@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../models/user.dart';
 import '../models/auth.dart';
 import '../services/api_service.dart';
@@ -12,6 +13,12 @@ class AuthProvider with ChangeNotifier {
   bool get isLoading => _isLoading;
   String? get errorMessage => _errorMessage;
   bool get isAuthenticated => _user != null;
+
+  Future<bool> checkAuthStatus() async {
+    final prefs = await SharedPreferences.getInstance();
+    final token = prefs.getString('auth_token');
+    return token != null && token.isNotEmpty;
+  }
 
   Future<bool> register({
     required String email,
