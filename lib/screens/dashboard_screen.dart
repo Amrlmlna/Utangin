@@ -4,6 +4,7 @@ import '../models/agreement.dart';
 import '../services/main_provider.dart';
 import 'create_agreement_screen.dart';
 import 'agreement_detail_screen.dart';
+import 'login_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -73,9 +74,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 value: 'logout',
                 child: Text('Logout'),
                 onTap: () async {
-                  await mainProvider.auth.logout();
+                  final provider = Provider.of<MainProvider>(context, listen: false);
+                  // Capture navigator before the async operation to avoid context sync issues
+                  final navigator = Navigator.of(context);
+                  await provider.auth.logout();
                   if (mounted) {
-                    Navigator.of(context).pushReplacementNamed('/login');
+                    // Navigate back to login by pushing the login screen and clearing the stack
+                    navigator.pushAndRemoveUntil(
+                      MaterialPageRoute(builder: (context) => const LoginScreen()),
+                      (route) => false,
+                    );
                   }
                 },
               ),

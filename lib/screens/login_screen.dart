@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../services/main_provider.dart';
 import 'register_screen.dart';
+import 'dashboard_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -37,11 +38,14 @@ class _LoginScreenState extends State<LoginScreen> {
         );
 
         if (success) {
-          // Navigate to dashboard or main screen
-          // For now, we'll just show a success message
           if (mounted) {
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(content: Text('Login successful!')),
+            );
+            // Navigate to dashboard after successful login
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const DashboardScreen()),
             );
           }
         } else {

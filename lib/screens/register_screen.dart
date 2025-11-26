@@ -3,6 +3,7 @@ import 'package:form_field_validator/form_field_validator.dart';
 import 'package:provider/provider.dart';
 import '../models/auth.dart';
 import '../services/main_provider.dart';
+import 'dashboard_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -60,8 +61,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
               const SnackBar(content: Text('Registration successful! Welcome to Utangin.')),
             );
             // Navigate to dashboard or home screen directly
-            Navigator.popUntil(context, ModalRoute.withName('/'));
-            Navigator.pushReplacementNamed(context, '/dashboard');
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const DashboardScreen()),
+            );
           } else if (result is Map<String, dynamic> && result.containsKey('message')) {
             // Email confirmation required
             ScaffoldMessenger.of(context).showSnackBar(
@@ -126,7 +129,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(Icons.person),
                   ),
-                  validator: RequiredValidator(errorText: 'Name is required'),
+                  validator: (value) => RequiredValidator(errorText: 'Name is required')(value),
                 ),
                 const SizedBox(height: 16),
                 TextFormField(
@@ -137,10 +140,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     prefixIcon: Icon(Icons.email),
                   ),
                   keyboardType: TextInputType.emailAddress,
-                  validator: MultiValidator([
+                  validator: (value) => MultiValidator([
                     RequiredValidator(errorText: 'Email is required'),
                     EmailValidator(errorText: 'Enter a valid email'),
-                  ]),
+                  ])(value),
                 ),
                 const SizedBox(height: 16),
                 TextFormField(
@@ -151,7 +154,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     prefixIcon: Icon(Icons.phone),
                   ),
                   keyboardType: TextInputType.phone,
-                  validator: RequiredValidator(errorText: 'Phone number is required'),
+                  validator: (value) => RequiredValidator(errorText: 'Phone number is required')(value),
                 ),
                 const SizedBox(height: 16),
                 TextFormField(
@@ -161,7 +164,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(Icons.credit_card),
                   ),
-                  validator: RequiredValidator(errorText: 'KTP number is required'),
+                  validator: (value) => RequiredValidator(errorText: 'KTP number is required')(value),
                 ),
                 const SizedBox(height: 16),
                 TextFormField(
@@ -172,7 +175,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     prefixIcon: Icon(Icons.home),
                   ),
                   maxLines: 3,
-                  validator: RequiredValidator(errorText: 'Address is required'),
+                  validator: (value) => RequiredValidator(errorText: 'Address is required')(value),
                 ),
                 const SizedBox(height: 16),
                 TextFormField(
@@ -183,10 +186,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     prefixIcon: Icon(Icons.lock),
                   ),
                   obscureText: true,
-                  validator: MultiValidator([
+                  validator: (value) => MultiValidator([
                     RequiredValidator(errorText: 'Password is required'),
                     MinLengthValidator(6, errorText: 'Password must be at least 6 characters'),
-                  ]),
+                  ])(value),
                 ),
                 const SizedBox(height: 16),
                 TextFormField(
