@@ -8,12 +8,21 @@ import '../models/agreement.dart';
 import '../models/notification.dart';
 
 class ApiService {
-  String _baseUrl = 'http://localhost:3000'; // Default fallback
+  static final ApiService _instance = ApiService._internal();
+  factory ApiService() => _instance;
+  ApiService._internal();
+
+  String _baseUrl = 'https://utangin-backend.onrender.com'; // Default fallback
   String? _token;
 
   Future<void> init() async {
-    // Load environment variables
-    await dotenv.load(fileName: ".env");
+    try {
+      // Load environment variables from assets
+      await dotenv.load(fileName: ".env");
+    } catch (e) {
+      // If loading from assets fails, continue with default values
+      // Could log to a proper logging system in production
+    }
 
     // Get the base URL from environment, with fallback
     String? envBaseUrl = dotenv.env['API_BASE_URL'];
@@ -26,7 +35,7 @@ class ApiService {
   }
 
   // Authentication methods
-  Future<LoginResponse> register(RegisterRequest request) async {
+  Future register(RegisterRequest request) async {
     final response = await http.post(
       Uri.parse('$_baseUrl/auth/register'),
       headers: <String, String>{
@@ -37,10 +46,32 @@ class ApiService {
 
     if (response.statusCode == 201) {
       final data = jsonDecode(response.body);
-      await _saveToken(data['token']);
-      return LoginResponse.fromJson(data);
+
+      // Check if the response contains a token (auto-confirmed) or just a message (requires confirmation)
+      if (data.containsKey('token')) {
+        // Email was auto-confirmed, user can be logged in immediately
+        await _saveToken(data['token']);
+        return LoginResponse.fromJson(data);
+      } else if (data.containsKey('message')) {
+        // Email confirmation required, return the message
+        return {'message': data['message']};
+      } else {
+        // Unexpected response format
+        throw Exception('Unexpected response format from server');
+      }
     } else {
-      throw Exception('Failed to register: ${response.body}');
+      // Try to get error details from response
+      String errorMessage = 'Registration failed. Please try again.';
+      try {
+        final errorData = jsonDecode(response.body);
+        if (errorData['message'] != null) {
+          errorMessage = errorData['message'];
+        }
+      } catch (e) {
+        // If response is not JSON, just use the status code
+        errorMessage = 'Registration failed with status code: ${response.statusCode}';
+      }
+      throw Exception(errorMessage);
     }
   }
 
@@ -56,12 +87,27 @@ class ApiService {
       }),
     );
 
-    if (response.statusCode == 200) {
-      final data = jsonDecode(response.body);
-      await _saveToken(data['token']);
-      return LoginResponse.fromJson(data);
+    if (response.statusCode == 200 || response.statusCode == 201) {
+      try {
+        final data = jsonDecode(response.body);
+        await _saveToken(data['token']);
+        return LoginResponse.fromJson(data);
+      } catch (e) {
+        throw Exception('Failed to parse login response: $e');
+      }
     } else {
-      throw Exception('Failed to login: ${response.body}');
+      // Try to get error details from response
+      String errorMessage = 'Login failed. Please check your credentials and try again.';
+      try {
+        final errorData = jsonDecode(response.body);
+        if (errorData['message'] != null) {
+          errorMessage = errorData['message'];
+        }
+      } catch (e) {
+        // If response is not JSON, just use the status code
+        errorMessage = 'Login failed with status code: ${response.statusCode}';
+      }
+      throw Exception(errorMessage);
     }
   }
 
@@ -78,7 +124,7 @@ class ApiService {
     if (response.statusCode == 200) {
       return User.fromJson(jsonDecode(response.body));
     } else {
-      throw Exception('Failed to get profile: ${response.body}');
+      throw Exception('Failed to get profile. Please try again later.');
     }
   }
 
@@ -93,7 +139,7 @@ class ApiService {
       final List<dynamic> data = jsonDecode(response.body);
       return data.map((json) => User.fromJson(json)).toList();
     } else {
-      throw Exception('Failed to get users: ${response.body}');
+      throw Exception('Failed to get users. Please try again later.');
     }
   }
 
@@ -106,7 +152,7 @@ class ApiService {
     if (response.statusCode == 200) {
       return User.fromJson(jsonDecode(response.body));
     } else {
-      throw Exception('Failed to get user: ${response.body}');
+      throw Exception('Failed to get user. Please try again later.');
     }
   }
 
@@ -120,7 +166,7 @@ class ApiService {
     if (response.statusCode == 200) {
       return User.fromJson(jsonDecode(response.body));
     } else {
-      throw Exception('Failed to update user: ${response.body}');
+      throw Exception('Failed to update user. Please try again later.');
     }
   }
 
@@ -135,7 +181,8 @@ class ApiService {
     if (response.statusCode == 201) {
       return Agreement.fromJson(jsonDecode(response.body));
     } else {
-      throw Exception('Failed to create agreement: ${response.body}');
+      // Don't expose response body for security
+      throw Exception('Failed to create agreement. Please try again later.');
     }
   }
 
@@ -149,7 +196,8 @@ class ApiService {
       final List<dynamic> data = jsonDecode(response.body);
       return data.map((json) => Agreement.fromJson(json)).toList();
     } else {
-      throw Exception('Failed to get agreements: ${response.body}');
+      // Don't expose response body for security
+      throw Exception('Failed to get agreements. Please try again later.');
     }
   }
 
@@ -162,7 +210,8 @@ class ApiService {
     if (response.statusCode == 200) {
       return Agreement.fromJson(jsonDecode(response.body));
     } else {
-      throw Exception('Failed to get agreement: ${response.body}');
+      // Don't expose response body for security
+      throw Exception('Failed to get agreement. Please try again later.');
     }
   }
 
@@ -176,7 +225,8 @@ class ApiService {
       final List<dynamic> data = jsonDecode(response.body);
       return data.map((json) => Agreement.fromJson(json)).toList();
     } else {
-      throw Exception('Failed to get user agreements: ${response.body}');
+      // Don't expose response body for security
+      throw Exception('Failed to get user agreements. Please try again later.');
     }
   }
 
@@ -190,7 +240,8 @@ class ApiService {
     if (response.statusCode == 200) {
       return Agreement.fromJson(jsonDecode(response.body));
     } else {
-      throw Exception('Failed to update agreement: ${response.body}');
+      // Don't expose response body for security
+      throw Exception('Failed to update agreement. Please try again later.');
     }
   }
 
@@ -203,7 +254,8 @@ class ApiService {
     if (response.statusCode == 200) {
       return Agreement.fromJson(jsonDecode(response.body));
     } else {
-      throw Exception('Failed to confirm agreement: ${response.body}');
+      // Don't expose response body for security
+      throw Exception('Failed to confirm agreement. Please try again later.');
     }
   }
 
@@ -216,7 +268,8 @@ class ApiService {
     if (response.statusCode == 200) {
       return Agreement.fromJson(jsonDecode(response.body));
     } else {
-      throw Exception('Failed to mark agreement as paid: ${response.body}');
+      // Don't expose response body for security
+      throw Exception('Failed to mark agreement as paid. Please try again later.');
     }
   }
 
@@ -231,7 +284,8 @@ class ApiService {
       final List<dynamic> data = jsonDecode(response.body);
       return data.map((json) => Notification.fromJson(json)).toList();
     } else {
-      throw Exception('Failed to get notifications: ${response.body}');
+      // Don't expose response body for security
+      throw Exception('Failed to get notifications. Please try again later.');
     }
   }
 
@@ -244,7 +298,8 @@ class ApiService {
     if (response.statusCode == 200) {
       return Notification.fromJson(jsonDecode(response.body));
     } else {
-      throw Exception('Failed to mark notification as read: ${response.body}');
+      // Don't expose response body for security
+      throw Exception('Failed to mark notification as read. Please try again later.');
     }
   }
 
@@ -259,7 +314,8 @@ class ApiService {
       final data = jsonDecode(response.body);
       return data['qr_code'] ?? '';
     } else {
-      throw Exception('Failed to generate QR code: ${response.body}');
+      // Don't expose response body for security
+      throw Exception('Failed to generate QR code. Please try again later.');
     }
   }
 

@@ -20,7 +20,7 @@ class AuthProvider with ChangeNotifier {
     return token != null && token.isNotEmpty;
   }
 
-  Future<bool> register({
+  Future register({
     required String email,
     required String password,
     required String name,
@@ -34,7 +34,7 @@ class AuthProvider with ChangeNotifier {
 
     try {
       final apiService = ApiService();
-      await apiService.register(
+      final result = await apiService.register(
         RegisterRequest(
           email: email,
           password: password,
@@ -44,13 +44,16 @@ class AuthProvider with ChangeNotifier {
           address: address,
         ),
       );
+
       _isLoading = false;
-      return true;
+
+      // Return the result - could be LoginResponse or message map
+      return result;
     } catch (e) {
       _isLoading = false;
       _errorMessage = e.toString();
       notifyListeners();
-      return false;
+      rethrow; // Re-throw so caller can handle the error
     }
   }
 

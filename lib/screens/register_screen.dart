@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:provider/provider.dart';
+import '../models/auth.dart';
 import '../services/main_provider.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -41,7 +42,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
       try {
         final mainProvider = Provider.of<MainProvider>(context, listen: false);
-        bool success = await mainProvider.auth.register(
+
+        // The register method now returns different responses depending on email confirmation
+        final result = await mainProvider.auth.register(
           email: _emailController.text.trim(),
           password: _passwordController.text,
           name: _nameController.text.trim(),
@@ -50,21 +53,31 @@ class _RegisterScreenState extends State<RegisterScreen> {
           address: _addressController.text.trim(),
         );
 
-        if (success) {
-          if (mounted) {
+        if (mounted) {
+          if (result is LoginResponse) {
+            // Registration successful with auto-confirmation
             ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text('Registration successful!')),
+              const SnackBar(content: Text('Registration successful! Welcome to Utangin.')),
+            );
+            // Navigate to dashboard or home screen directly
+            Navigator.popUntil(context, ModalRoute.withName('/'));
+            Navigator.pushReplacementNamed(context, '/dashboard');
+          } else if (result is Map<String, dynamic> && result.containsKey('message')) {
+            // Email confirmation required
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text(result['message'] ?? 'Please check your email to confirm your account.')),
+            );
+            // Pop back to login screen since registration needs confirmation
+            Navigator.pop(context);
+          } else {
+            // Unexpected result type
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text('Registration successful! Please check your email to confirm your account.')),
             );
             Navigator.pop(context);
           }
-        } else {
-          if (mounted) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text('Registration failed: ${mainProvider.auth.errorMessage}')),
-            );
-          }
         }
-      } catch (e) {
+      } on Exception catch (e) {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text('Registration failed: $e')),
@@ -195,7 +208,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 _isLoading
                     ? const CircularProgressIndicator()
                     : ElevatedButton(
-                        onPressed: _register,
+                        onPressed: () => _register(),
                         style: ElevatedButton.styleFrom(
                           minimumSize: const Size(double.infinity, 50),
                           backgroundColor: Theme.of(context).colorScheme.primary,

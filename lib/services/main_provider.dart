@@ -15,7 +15,7 @@ class MainProvider with ChangeNotifier {
 
   Future<void> init() async {
     // Initialize the API service to load environment variables
-    final apiService = ApiService();
+    final apiService = ApiService(); // This will now return the singleton instance
     await apiService.init();
 
     // Only try to fetch user profile if token exists
