@@ -5,7 +5,7 @@ import 'theme/app_theme.dart';
 import 'screens/splash_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/register_screen.dart';
-import 'screens/dashboard_screen.dart';
+import 'screens/bottom_nav_dashboard.dart';
 import 'screens/create_agreement_screen.dart';
 import 'screens/qr_scanner_screen.dart';
 import 'screens/repayment_tracking_screen.dart';
@@ -34,7 +34,7 @@ class UtanginApp extends StatelessWidget {
             routes: {
               '/login': (context) => const LoginScreen(),
               '/register': (context) => const RegisterScreen(),
-              '/dashboard': (context) => const DashboardScreen(),
+              '/dashboard': (context) => const BottomNavDashboard(),
               '/create-agreement': (context) => const CreateAgreementScreen(),
               '/qr-scanner': (context) => const QRScannerScreen(),
               '/repayment-tracking': (context) => const RepaymentTrackingScreen(),

@@ -3,7 +3,7 @@ import 'package:form_field_validator/form_field_validator.dart';
 import 'package:provider/provider.dart';
 import '../models/auth.dart';
 import '../services/main_provider.dart';
-import 'dashboard_screen.dart';
+import 'bottom_nav_dashboard.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -63,7 +63,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             // Navigate to dashboard or home screen directly
             Navigator.pushReplacement(
               context,
-              MaterialPageRoute(builder: (context) => const DashboardScreen()),
+              MaterialPageRoute(builder: (context) => const BottomNavDashboard()),
             );
           } else if (result is Map<String, dynamic> && result.containsKey('message')) {
             // Email confirmation required
